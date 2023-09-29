@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BaristaService:war">
+    <output-path>$PROJECT_DIR$/BaristaService/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>BaristaService</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="BaristaService-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="BaristaService:war exploded" />
+    </root>
+  </artifact>
+</component>
