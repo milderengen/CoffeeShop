@@ -7,4 +7,4 @@
 How to make it better
 - Orders could be managed by Kafka and streamed to Barista
 - It is a bit messy
-- I will add things here tomorrow as i haven't slept because of this for 29 hours and i am kinda done. 
+- I will add things here tomorrow as i haven't slept because of this for 29 hours, and i would not for next 29 if it was necessary, but my job is calling 
