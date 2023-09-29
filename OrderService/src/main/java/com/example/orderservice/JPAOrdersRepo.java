@@ -17,11 +17,11 @@ public class JPAOrdersRepo implements OrderRepo{
     public Order save(Order order) {
         entityManager.getTransaction().begin();
 
-        // Construct the SQL statement
+
         String sql = "INSERT INTO Order_table(coffeeSize, coffeeType, milkType, orderType, orderStatus, price) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
 
-        // Prepare and execute the query
+
         entityManager.createNativeQuery(sql)
                 .setParameter(1, order.getCoffeeSize().toString())
                 .setParameter(2, order.getCoffeeType().toString())
@@ -31,7 +31,7 @@ public class JPAOrdersRepo implements OrderRepo{
                 .setParameter(6, order.getPrice())
                 .executeUpdate();
 
-        // Commit the transaction
+
         entityManager.getTransaction().commit();
         return order;
     }

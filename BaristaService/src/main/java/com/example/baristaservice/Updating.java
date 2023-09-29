@@ -39,8 +39,6 @@ public class Updating {
         ObjectMapper mapper = new ObjectMapper();
         Order order = mapper.readValue(jsonResponse, Order.class);
         order.setOrderStatus(newStatus);
-        /*System.out.println(order.getOrderStatus());
-        System.out.println(newStatus);**/
 
         if(newStatus.equals(OrderStatus.PICKED_UP)){
             try {

@@ -34,25 +34,14 @@ public class HelloResource {
         orderRepository.save(order);
         return "OK";
     }
-//    @POST
-//    @Produces("text/plain")
-//    public String dummy(){
-//        Order order = new Order();
-//        order.setCoffeeSize(CoffeeSize.Medium);
-//        order.setCoffeeType(CoffeeType.espresso);
-//        order.setOrderType(OrderType.onSite);
-//        order.setMilkType(MilkType.cowMilk);
-//        order.setPrice(2.22);
-//        orderRepository.save(order);
-//        return "OK";
-//    }
+//
     @POST
     @Consumes("application/json")
     @Path("/sendNotification")
     public void fireNotification(Order order){
             if (order != null) {
                 try {
-                    FileWriter writer = new FileWriter("notifications.txt", true); // true means append mode
+                    FileWriter writer = new FileWriter("notifications.txt", true);
                     writer.write("Order " + order.getOrderNumber() + " was picked up.\n");
                     writer.close();
                 } catch (IOException e) {
